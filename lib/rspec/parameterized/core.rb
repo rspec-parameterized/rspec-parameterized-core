@@ -1,4 +1,4 @@
-require "rspec/parameterized/version"
+require "rspec/parameterized/core/version"
 require 'parser'
 require 'unparser'
 require 'proc_to_ast'
@@ -172,7 +172,7 @@ module RSpec
 
   module Core
     class ExampleGroup
-      extend ::RSpec::Parameterized::ExampleGroupMethods
+      extend ::RSpec::Parameterized::Core::ExampleGroupMethods
     end
   end
 end
