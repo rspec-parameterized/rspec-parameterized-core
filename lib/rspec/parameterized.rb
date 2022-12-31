@@ -7,8 +7,6 @@ require 'rspec/parameterized/example_helper_methods'
 
 module RSpec
   module Parameterized
-    autoload :TableSyntax, 'rspec/parameterized/table_syntax'
-
     module ExampleGroupMethods
       # capsulize parameter attributes
       class Parameter
