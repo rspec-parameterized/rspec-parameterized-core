@@ -1,6 +1,9 @@
 # Rspec::Parameterized::Core
 `rspec-parameterized-core` provides parameterized test syntax in [rspec](https://rspec.info/).
 
+[![Gem Version](https://badge.fury.io/rb/rspec-parameterized-core.svg)](https://badge.fury.io/rb/rspec-parameterized-core)
+[![RSpec](https://github.com/rspec-parameterized/rspec-parameterized-core/actions/workflows/rspec.yml/badge.svg)](https://github.com/rspec-parameterized/rspec-parameterized-core/actions/workflows/rspec.yml)
+
 ## Installation
 ```ruby
 # Install all components
