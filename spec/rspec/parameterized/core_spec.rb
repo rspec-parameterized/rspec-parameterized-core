@@ -259,6 +259,50 @@ describe RSpec::Parameterized do
         end
       end
     end
+
+    context "have multibyte string usecase" do
+      context 'only in lazy' do
+        where(:value, :answer) do
+          [
+            ["non multibyte parameter", lazy { "パラメータ is non multibyte parameter" }]
+          ]
+        end
+
+        with_them do
+          it "should run with correct description" do
+            expect("パラメータ is #{value}").to eq answer
+          end
+        end
+      end
+
+      context 'with multibyte other parameter' do
+        where(:value, :answer) do
+          [
+            ["lazyとは別のパラメータ", lazy { "パラメータ is lazyとは別のパラメータ" }]
+          ]
+        end
+
+        with_them do
+          it "should run with correct description" do
+            expect("パラメータ is #{value}").to eq answer
+          end
+        end
+      end
+
+      context 'use マルチバイト in ancestor context description' do
+        where(:value, :answer) do
+          [
+            ["non multibyte parameter", lazy { "パラメータ is non multibyte parameter"}]
+          ]
+        end
+
+        with_them do
+          it "should run with correct description" do
+            expect("パラメータ is #{value}").to eq answer
+          end
+        end
+      end
+    end
   end
 
   context "when the where block is after with_them" do
