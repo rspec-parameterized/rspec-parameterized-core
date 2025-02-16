@@ -326,7 +326,7 @@ describe RSpec::Parameterized do
     end
   end
 
-  context "when the where block is between with_thems" do
+  context "when the where block is between with_them" do
     with_them do
       it "should do additions" do
         expect(a + b).to eq answer

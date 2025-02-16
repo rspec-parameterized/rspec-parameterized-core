@@ -11,6 +11,8 @@ module RSpec
         end
 
         def inspect
+          return super.inspect unless @block.respond_to?(:to_raw_source)
+
           "#{@block.to_raw_source}"
         rescue Parser::SyntaxError
           super.inspect

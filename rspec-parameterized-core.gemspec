@@ -33,10 +33,10 @@ I was inspired by [udzura's mock](https://gist.github.com/1881139).}
   spec.require_paths = ["lib"]
 
   spec.add_dependency "parser"
-  spec.add_dependency "proc_to_ast", ">= 0.2.0"
   spec.add_dependency "rspec", ">= 2.13", "< 4"
   spec.add_dependency "unparser"
 
+  spec.add_development_dependency "proc_to_ast", ">= 0.2.0"
   spec.add_development_dependency "rake", ">= 12.0.0"
 
   # For more information and examples about making a new gem, check out our

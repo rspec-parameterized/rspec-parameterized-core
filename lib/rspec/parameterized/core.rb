@@ -1,9 +1,13 @@
 require "rspec/parameterized/core/version"
 require 'parser'
 require 'unparser'
-require 'proc_to_ast'
 require 'rspec/parameterized/core/helper_methods'
 require 'rspec/parameterized/core/example_helper_methods'
+
+begin
+  require 'proc_to_ast'
+rescue LoadError
+end
 
 module RSpec
   module Parameterized
@@ -144,7 +148,7 @@ module RSpec
 
         def params_inspect(obj)
           begin
-            obj.is_a?(Proc) ? obj.to_raw_source : obj.inspect
+            obj.is_a?(Proc) && obj.respond_to?(:to_raw_source) ? obj.to_raw_source : obj.inspect
           rescue Parser::SyntaxError
             return obj.inspect
           end
