@@ -33,10 +33,34 @@ module RSpec
         # @param obj [Object]
         # @return [String]
         def self.to_raw_source_with_prism(obj)
-          # TODO: Impl
-          raise "TODO: Impl"
+          return obj.inspect unless obj.is_a?(Proc)
+
+          filename, linenum = obj.source_location
+          ast = parse_with_prism(filename, linenum)
+
+          return "" unless ast
+
+          ast.source.source.strip
         end
         private_class_method :to_raw_source_with_prism
+
+        # @param filename [String]
+        # @param linenum [Integer]
+        #
+        # @return [Prism::ParseResult,nil]
+        def self.parse_with_prism(filename, linenum)
+          buf = []
+          File.open(filename, "rb").each_with_index do |line, index|
+            next if index < linenum - 1
+            buf << line
+
+            ret = Prism.parse(buf.join("\n"))
+            return ret if ret.success?
+          end
+
+          nil
+        end
+        private_class_method :parse_with_prism
       end
     end
   end
