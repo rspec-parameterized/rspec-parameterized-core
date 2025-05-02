@@ -28,6 +28,18 @@ describe RSpec::Parameterized::Core::CompositeParser do
         it { should eq '->(a) { a + "ほげほげ" }' }
         its(:encoding) { should eq Encoding::UTF_8 }
       end
+
+      context "multiple lines" do
+        let(:arg) do
+          ->(a) {
+            a +
+              1
+          }
+        end
+
+        it { should eq "->(a) {\n            a +\n              1\n          }" }
+        its(:encoding) { should eq Encoding::UTF_8 }
+      end
     end
   end
 end

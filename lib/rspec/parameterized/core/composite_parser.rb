@@ -54,7 +54,7 @@ module RSpec
             next if index < linenum - 1
             buf << line
 
-            ret = Prism.parse(buf.join("\n"))
+            ret = Prism.parse(buf.join)
             return ret if ret.success?
           end
 
