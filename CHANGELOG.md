@@ -1,5 +1,14 @@
 ## [Unreleased]
-[Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v1.0.1...main)
+[Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v2.0.0...main)
+
+## [2.0.0](https://github.com/rspec-parameterized/rspec-parameterized-core/releases/tag/v2.0.0) - 2025-05-02
+[Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v1.0.1...v2.0.0)
+
+- Requires Ruby 2.7+
+  - https://github.com/rspec-parameterized/rspec-parameterized-core/pull/19
+- Use Prism gem instead of Parser gem when Ruby 3.4+
+  - https://github.com/rspec-parameterized/rspec-parameterized-core/issues/17
+  - https://github.com/rspec-parameterized/rspec-parameterized-core/pull/18
 
 ## [1.0.1] - 2024-05-04
 [Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v1.0.0...v1.0.1)
