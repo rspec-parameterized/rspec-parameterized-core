@@ -1,9 +1,8 @@
 require "rspec/parameterized/core/version"
-require 'parser'
-require 'unparser'
-require 'proc_to_ast'
 require 'rspec/parameterized/core/helper_methods'
 require 'rspec/parameterized/core/example_helper_methods'
+require 'rspec/parameterized/core/errors'
+require 'rspec/parameterized/core/composite_parser'
 
 module RSpec
   module Parameterized
@@ -143,11 +142,9 @@ module RSpec
         end
 
         def params_inspect(obj)
-          begin
-            obj.is_a?(Proc) ? obj.to_raw_source : obj.inspect
-          rescue Parser::SyntaxError
-            return obj.inspect
-          end
+          RSpec::Parameterized::Core::CompositeParser.to_raw_source(obj)
+        rescue ParserSyntaxError
+          return obj.inspect
         end
 
         def set_verbose_parameters(&block)

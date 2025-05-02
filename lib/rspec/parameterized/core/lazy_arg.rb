@@ -11,8 +11,8 @@ module RSpec
         end
 
         def inspect
-          "#{@block.to_raw_source}"
-        rescue Parser::SyntaxError
+          CompositeParser.to_raw_source(@block)
+        rescue ParserSyntaxError
           super.inspect
         end
       end
