@@ -43,6 +43,7 @@ I was inspired by [udzura's mock](https://gist.github.com/1881139).}
   spec.add_dependency "prism"
 
   spec.add_development_dependency "rake", ">= 12.0.0"
+  spec.add_development_dependency "rspec-its"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
