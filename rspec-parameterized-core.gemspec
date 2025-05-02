@@ -32,10 +32,15 @@ I was inspired by [udzura's mock](https://gist.github.com/1881139).}
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "rspec", ">= 2.13", "< 4"
+
+  # parser dependencies
   spec.add_dependency "parser"
   spec.add_dependency "proc_to_ast", ">= 0.2.0"
-  spec.add_dependency "rspec", ">= 2.13", "< 4"
   spec.add_dependency "unparser"
+
+  # prism dependencies
+  spec.add_dependency "prism"
 
   spec.add_development_dependency "rake", ">= 12.0.0"
 
