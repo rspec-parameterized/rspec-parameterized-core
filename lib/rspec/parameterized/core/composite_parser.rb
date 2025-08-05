@@ -25,7 +25,7 @@ module RSpec
         # @raise [RSpec::Parameterized::Core::ParserSyntaxError]
         def self.to_raw_source_with_parser(obj)
           obj.is_a?(Proc) ? obj.to_raw_source : obj.inspect
-        rescue Parser::SyntaxError => e
+        rescue Parser::SyntaxError
           raise ParserSyntaxError
         end
         private_class_method :to_raw_source_with_parser
