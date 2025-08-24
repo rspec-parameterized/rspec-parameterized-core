@@ -78,6 +78,8 @@ module RSpec
           @parameter ||= nil
 
           if @parameter.nil?
+            warn "#{b&.source_location&.join(':') || caller[0]}: `where` not defined."
+
             @parameterized_pending_cases ||= []
             @parameterized_pending_cases << [args, b]
           else
