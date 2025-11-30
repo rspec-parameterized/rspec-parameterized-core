@@ -1,5 +1,11 @@
 ## [Unreleased]
-[Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v2.0.0...main)
+[Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v2.0.1...main)
+
+## [2.0.1](https://github.com/rspec-parameterized/rspec-parameterized-core/releases/tag/v2.0.1) - 2025-11-30
+[Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v2.0.0...v2.0.1)
+
+- Release gem from GitHub Actions
+  - https://github.com/rspec-parameterized/rspec-parameterized-core/pull/23
 
 ## [2.0.0](https://github.com/rspec-parameterized/rspec-parameterized-core/releases/tag/v2.0.0) - 2025-05-02
 [Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v1.0.1...v2.0.0)
