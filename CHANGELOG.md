@@ -6,6 +6,8 @@
 
 - Release gem from GitHub Actions
   - https://github.com/rspec-parameterized/rspec-parameterized-core/pull/23
+- Fix unused variable warning
+  - https://github.com/rspec-parameterized/rspec-parameterized-core/pull/20
 
 ## [2.0.0](https://github.com/rspec-parameterized/rspec-parameterized-core/releases/tag/v2.0.0) - 2025-05-02
 [Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v1.0.1...v2.0.0)
