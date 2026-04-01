@@ -1,5 +1,11 @@
 ## [Unreleased]
-[Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v2.0.1...main)
+[Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v2.0.2...main)
+
+## [2.0.2](https://github.com/rspec-parameterized/rspec-parameterized-core/releases/tag/v2.0.2) - 2026-04-01
+[Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v2.0.1...v2.0.2)
+
+- Fix massive object allocation in LazyArg#inspect
+  - https://github.com/rspec-parameterized/rspec-parameterized-core/pull/36
 
 ## [2.0.1](https://github.com/rspec-parameterized/rspec-parameterized-core/releases/tag/v2.0.1) - 2025-11-30
 [Full Changelog](https://github.com/rspec-parameterized/rspec-parameterized-core/compare/v2.0.0...v2.0.1)
