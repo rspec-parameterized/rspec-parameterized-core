@@ -11,9 +11,8 @@ module RSpec
         end
 
         def inspect
-          CompositeParser.to_raw_source(@block)
-        rescue ParserSyntaxError
-          super.inspect
+          filename, linenum = @block.source_location
+          "lazy { ... } (#{File.basename(filename)}:#{linenum})"
         end
       end
     end
